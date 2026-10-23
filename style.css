@@ -1,0 +1,241 @@
+
+/* Configuracoes gerais */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Pagina de login */
+.pagina-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.caixa-login {
+    background-color: white;
+    padding: 30px;
+    width: 350px;
+    max-width: 90%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #cccccc;
+}
+
+.caixa-login h1 {
+    text-align: center;
+    color: #245a9c;
+}
+
+.caixa-login p {
+    text-align: center;
+    color: #555555;
+}
+
+.caixa-login form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.caixa-login label {
+    font-weight: bold;
+}
+
+.caixa-login input {
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+}
+
+.botao-entrar {
+    background-color: #245a9c;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.botao-entrar:hover {
+    background-color: #174374;
+}
+
+/* Estrutura do dashboard */
+.painel {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Menu lateral */
+.menu {
+    background-color: #245a9c;
+    color: white;
+    width: 220px;
+    padding: 20px;
+}
+
+.menu h2 {
+    text-align: center;
+}
+
+.menu nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.menu a:hover {
+    background-color: #174374;
+}
+
+/* Conteudo principal */
+.conteudo {
+    flex: 1;
+    padding: 30px;
+    min-width: 0;
+}
+
+header {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: #245a9c;
+}
+
+/* Cartoes com informacoes */
+.cartoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.cartao {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #dddddd;
+}
+
+.cartao h3 {
+    color: #555555;
+}
+
+.cartao p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #245a9c;
+}
+
+/* Relatorio */
+.secao {
+    margin-top: 30px;
+}
+
+.relatorio {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.barra {
+    background-color: #dddddd;
+    height: 20px;
+    border-radius: 4px;
+}
+
+.progresso {
+    background-color: #245a9c;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.segunda {
+    width: 40%;
+}
+
+.terca {
+    width: 65%;
+}
+
+.quarta {
+    width: 50%;
+}
+
+.quinta {
+    width: 80%;
+}
+
+.sexta {
+    width: 95%;
+}
+
+/* Atividades recentes */
+.atividades {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.atividades p {
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 10px;
+}
+
+/* Adaptacao para tablets */
+@media (max-width: 900px) {
+    .cartoes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu {
+        width: 180px;
+    }
+}
+
+/* Adaptacao para celulares */
+@media (max-width: 600px) {
+    .painel {
+        flex-direction: column;
+    }
+
+    .menu {
+        width: 100%;
+    }
+
+    .menu nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .conteudo {
+        padding: 15px;
+    }
+
+    .cartoes {
+        grid-template-columns: 1fr;
+    }
+
+    .caixa-login {
+        padding: 20px;
+    }
+}
